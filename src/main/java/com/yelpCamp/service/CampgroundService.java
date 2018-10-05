@@ -3,6 +3,7 @@ package com.yelpCamp.service;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.yelpCamp.dao.CampgroundDao;
@@ -12,6 +13,7 @@ import com.yelpCamp.entity.Campground;
 public class CampgroundService {
 
     @Autowired
+    @Qualifier("MySQLData")
     private CampgroundDao campgroundDao;
 
     public Collection<Campground> getAllCampgrounds(){
