@@ -13,7 +13,6 @@ import com.yelpCamp.entity.Campground;
 public class CampgroundService {
 
     @Autowired
-    @Qualifier("MySQLData")
     private CampgroundDao campgroundDao;
 
     public Collection<Campground> getAllCampgrounds(){
